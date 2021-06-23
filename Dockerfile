@@ -1,4 +1,3 @@
-FROM openjdk:8
-ADD LoginWebApp.war LoginWebApp.war
-EXPOSE 9000
-ENTRYPOINT ["java", "-war", "LoginWebApp.war"]
+FROM tomcat:8-jre8
+MAINTAINER "rutuja"
+COPY ./LoginWebApp.war /usr/local/tomcat/webapps/webapp.war
